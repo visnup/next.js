@@ -1918,7 +1918,6 @@ export default class Router implements BaseRouter {
       const fetchNextDataParams: FetchNextDataParams = {
         dataHref: this.pageLoader.getDataHref({
           href: formatWithValidation({ pathname, query }),
-          skipInterpolation: true,
           asPath: resolvedAs,
           locale,
         }),
@@ -2015,7 +2014,6 @@ export default class Router implements BaseRouter {
             : await fetchNextData({
                 dataHref: this.pageLoader.getDataHref({
                   href: formatWithValidation({ pathname, query }),
-                  skipInterpolation: true,
                   asPath: resolvedAs,
                   locale,
                 }),
